@@ -31,3 +31,20 @@ https://tolovefeels.tistory.com/52
 https://velog.io/@chy0428/Node-JS-MongoDB-%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0
 
 https://maybechrisk.tistory.com/5
+
+
+
+// 참고할만한 블로그였던것,.,,
+http://blog.naver.com/sejun3278/221569678512
+https://blog.naver.com/cogz/222174000712
+https://react.vlpt.us/basic/07-useState.html
+https://learnjs.vlpt.us/async/01-promise.html
+https://ui.toast.com/
+
+// 깃허브관련자료
+https://mydailydairy.tistory.com/7
+
+//리소스관련 출처
+https://www.iconfinder.com/
+
+디자인은 대충 유튜브 및 핀터레스트에서 게시판 디자인을 참고
