@@ -3,8 +3,8 @@ const jwt = require('jsonwebtoken');
 const { UserInputError } = require('apollo-server');
 
 const { validateRegisterInput, validateLoginInput } = require('../../util/Validators');
-const {SECRET_KEY} = require('../../config');
-const Users = require('../../models/Users');
+const { SECRET_KEY } = require('../../config');
+const Users = require('../../models/User');
 
 function generateToken(user) {
   return jwt.sign({
@@ -18,12 +18,13 @@ module.exports = {
   Mutation: {
     async login(_,{ userName, password}){
       const { errors, valid } = validateLoginInput(userName, password);
-      const user = await Users.findOne({ userName });
 
       if(!valid) {
         throw new UserInputError('Errors', { errors });
       }
 
+      const user = await Users.findOne({ userName });
+      
       if (!user) {
         errors.general = 'User not found';
         throw new UserInputError('User not found', { errors });
