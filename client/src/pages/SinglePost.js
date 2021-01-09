@@ -15,6 +15,7 @@ import { AuthContext } from "../context/auth";
 import DeleteButton from "../components/DeleteButton";
 import moment from "moment";
 import MyPopup from "../util/MyPopup";
+import EditButton from "../components/EditButton";
 
 function SinglePost(props) {
   const postId = props.match.params.postId;
@@ -130,7 +131,10 @@ function SinglePost(props) {
               <Card fluid key={comment.id}>
                 <Card.Content>
                   {user && user.userName === comment.userName && (
-                    <DeleteButton postId={id} commentId={comment.id} />
+                    <div>
+                      <DeleteButton postId={id} commentId={comment.id} />
+                      <EditButton postId={id} commentId={comment.id} />
+                    </div>
                   )}
                   <Card.Header>{comment.userName}</Card.Header>
                   <Card.Meta>{moment(comment.createdAt).fromNow()}</Card.Meta>
