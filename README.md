@@ -4,6 +4,9 @@
 
 MongoDB + Express + React + Node + GraphQL
 
+npm run serve gql서버
+cd client -> npm start 리액트 
+
 
 
 
